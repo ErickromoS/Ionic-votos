@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <img class="rounded-full w-96 h-96" [src]="ImagePath" alt="image description">
+    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Propuestas:</h2>
+    <div *ngFor="let propuesta of propuestas">
+     
+
+<ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+    <li>
+      {{propuesta}}
+    </li>
+</ul>
+
+      
+    </div>
+
+    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Biografia:</h2>
+
+    <p>{{descripcion}}</p>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrar()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+</ion-content>
